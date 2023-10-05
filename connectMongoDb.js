@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 const connectDB = async () => {
     try {
         mongoose.set('strictQuery', false);
-        const conn = await mongoose.connect( "mongodb://127.0.0.1:27017", {
+        const conn = await mongoose.connect( "mongodb+srv://admin:FLTu0bk09X8p0La1@cluster0.pvksjm8.mongodb.net/?retryWrites=true&w=majority"
+
+        , {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

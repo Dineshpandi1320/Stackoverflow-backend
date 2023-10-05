@@ -8,13 +8,13 @@ import answerRoutes from "./routes/Answers.js";
 import connectDB from "./connectMongoDb.js";
 
 dotenv.config();
-await connectDB();
+
 const app = express();
 
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-
+await connectDB();
 app.get('/', (req, res) => {
   res.json({ message: 'Hello, this is a simple API response!' });
 });
